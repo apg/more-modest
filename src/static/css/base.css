@@ -1,0 +1,84 @@
+body {
+ background: #fff;
+ font-size: 62.5%;
+ text-align: center;
+}
+
+h1, h2 {
+ color: #0000ff;
+}
+
+h1 a, h2 a, h3 a {
+ text-decoration: none;
+}
+
+.wrapper {
+ width: 650px;
+ margin: 0 auto;
+ text-align: left;
+}
+
+.wrapper header {
+ text-align: center;
+}
+
+.wrapper header nav {
+ text-align: left;
+ font-size: 1.4em;
+}
+
+.wrapper header h1 {
+ padding-top: 40px;
+}
+
+.wrapper main {
+ padding-top: 30px;
+ line-height: 1.5;
+}
+
+.wrapper main h2 {
+ font-size: 3.2em;
+}
+
+.wrapper main hr {
+ background: #eee;
+ height: 1px;
+ border: 0;
+}
+
+.wrapper main article,
+.wrapper main section {
+ font-size: 1.6em;
+}
+
+.wrapper main pre {
+ margin: 10px;
+}
+
+.wrapper main .footnotes {
+ margin-top: 40px;
+}
+
+.wrapper main.index h2 {
+ font-size: 2.4em;
+}
+
+.wrapper main.index h2 em {
+ vertical-align: middle;
+ font-style: normal;
+ color: #999;
+ font-size: .5em;
+}
+
+.wrapper footer {
+ margin-top: 60px;
+ padding-top: 100px;
+ border-top: 1px solid #eee;
+ color: #666;
+ font-size: 1.4em;
+}
+
+.wrapper footer p {
+ padding-left: 32px;
+ padding-right: 32px;
+}
