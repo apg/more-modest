@@ -41,7 +41,7 @@ Andrew Gwozdziewycz <web@apgwoz.com>
 
 ## Contributors
 
-Wub TheCaptain
+WubTheCaptain
 
 ## Copyright
 
