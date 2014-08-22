@@ -9,7 +9,7 @@ have.
 
 ## Install
 
-1. Install [discount]()
+1. Install [discount][]
 2. Clone/fork this repo and type `make run`
 
 ### Requirements
