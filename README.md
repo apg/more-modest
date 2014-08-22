@@ -39,6 +39,10 @@ verbatim into `$BUILDDIR/static`
 
 Andrew Gwozdziewycz <web@apgwoz.com>
 
+## Contributors
+
+Wub TheCaptain
+
 ## Copyright
 
 Copyright 2014, Andrew Gwozdziewycz, <web@apgwoz.com>

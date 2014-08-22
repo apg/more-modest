@@ -15,9 +15,9 @@
 
 # These configure the atom feed
 BLOG_TITLE = Example Blog 
-BLOG_URL = http://example.com 
+BLOG_URL = http://example.com
 BLOG_AUTHOR = Joe Sixpack
-BLOG_ATOM_ID = $(shell echo $(BLOG_URL) | md5sum | cut -f 1 -d ' ')
+BLOG_ATOM_ID = $(shell echo $(BLOG_URL) | sed -e 's/ //g' | md5sum | cut -f 1 -d ' ')
 
 # For the make sync target
 RSYNC_TARGET = user@domain:directory
@@ -86,7 +86,7 @@ $(BUILDDIR)/feed.xml: $(entry_srcs)
 	   sub(/\.md$$/, ".html", arr[3])
 	   return arr[3]
 	}
-	{print "<entry><title>" htmlescape($$4) "</title><link href=\42$(BLOG_URL)/" filename($$1) "\42/><id>" filename($$1) "</id><updated>" $$3 "T00:00:00Z</updated><content type=\42html\42><![CDATA[]]></content></entry>"}' >> $@
+	{print "<entry><title>" htmlescape($$4) "</title><link href=\42$(BLOG_URL)/" filename($$1) "\42/><id>$(BLOG_URL)/" filename($$1) "</id><updated>" $$3 "T00:00:00Z</updated><content type=\42html\42><![CDATA[]]></content></entry>"}' >> $@
 
 	@echo "</feed>" >> $@
 	@cp $@ $(BUILDDIR)/atom.xml
@@ -115,7 +115,7 @@ sync:
 
 run: all
 	@pushd .
-	cd build/
+	cd $(BUILDDIR)
 	python2.7 -m SimpleHTTPServer
 	@popd
 
